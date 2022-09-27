@@ -1,6 +1,9 @@
 const Login =()=> {
     return (
-        <>Login</>
+        <div className="text-white">
+            Login
+        </div>
+       
     )  
 }
 
