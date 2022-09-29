@@ -21,6 +21,7 @@ router.get('/products', async (req, res) => {
 
 router.get('/products-by-categories', async(req, res) => {
     try {
+        console.log("hit")
         const products = await Product.aggregate([   // mongodb queries
             { $match: {}},
             { $group: {

@@ -6,25 +6,26 @@ import { fetchProducts, selectAllProducts } from '../../stores/cart/menu/product
 const Menu =()=> {
     const dispatch = useDispatch();
     const products = useSelector(selectAllProducts);
-
+    console.log(products)
     useEffect(()=>{
         dispatch(fetchProducts())
 }, [])
     return (
         <div>
             {
-                products.status === 'pending'? <div>LOADING......</div>:
-                <div>
+                
+                products? products.status === 'fulfilled'? <div className='menu-wrapper'>
                     {
-                        products && products.map(product, index)=>{
+                        products.products && products.products.map((product, index)=> {
+                            console.log(index, product)
                             return (
-                                <>
-                                    <h2>{product}</h2>
-                                </>
+                               <div key = {index} className='text-white'>{product.name.name}</div>
                             )
-                        }
+                        })
                     }
-                </div>
+                </div>:
+                <div>LOADING......</div>:<div>LOADING......</div>
+                
             }
         </div>
     )  
