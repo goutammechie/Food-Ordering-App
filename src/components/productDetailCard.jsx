@@ -1,7 +1,7 @@
 import Button from "./elements/Button";
 import button from "./elements/Button";
 
-const ProductDetailCard= ({product})=>{
+const ProductDetailCard= ({product, onAddProduct })=>{
     return (
         <div className="p-4 m-4  rounded-lg bg-gray-200">
             <div className="flex flex-col items-center justify-between">
@@ -20,7 +20,7 @@ const ProductDetailCard= ({product})=>{
                 <img src={product.imageUrl} className="w-40 h-40 rounded-xl object-cover" alt={product.name} />
             </div>
             <div className="w-full flex items-center justify-center">
-                <Button>Add to cart</Button>
+                <Button onClick={onAddProduct}>Add to cart</Button>
             </div>
 
         </div>
