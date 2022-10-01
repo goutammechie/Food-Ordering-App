@@ -9,7 +9,7 @@ export const addressSlice = createSlice({
     initialState,
     reducers: {
         setAddress: (state, action) => {
-            return  {address: action.payload } //the payload is the data that your reducer will use to update the state
+            return  {address: action.payload }
         },
         clearAddress: (state) => {
             return { address: {}}
