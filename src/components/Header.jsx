@@ -1,5 +1,5 @@
 import foody from "../assets/images/foody1.jpg"
-import cartIcon from "../assets/icons/cart.svg";
+import cartIcon from "../assets/images/cart_icon.png";
 import { Link } from "react-router-dom"
 export const Header =({ cartCount }) =>{
     return (
@@ -18,11 +18,11 @@ export const Header =({ cartCount }) =>{
 
                 </div>
                 <div className=" flex items-center justify-center space-x-4">
-                    <Link to="/cart" className="mr-4 relative">
+                    <Link to="/cart" className="w-12 h-15 mr-4 relative">
                         <img src={cartIcon} alt="cart"/>
                         {
                             cartCount>0? 
-                            <div className=" rounded-lg bg-yellow-400 text-white inline-flex justify-center items-center w-full absolute -top-1 -right-1">
+                            <div className=" rounded-lg w-6 h-6  bg-yellow-400 text-white inline-flex justify-center items-center w-full absolute -top-1 -right-1">
                                 {cartCount}
                             </div>: null
                         }
