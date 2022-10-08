@@ -1,0 +1,4 @@
+{ "_id": {"$oid":"631646e925a0f269d68afa54"}, "name": "breakfast" }
+  { "_id": {"$oid":"631646e925a0f269d68afa55"}, "name": "lunch" }
+  { "_id": {"$oid":"631646e925a0f269d68afa56"}, "name": "dinner" }
+  { "_id": {"$oid":"631646e925a0f269d68afa57"}, "name": "drinks" }

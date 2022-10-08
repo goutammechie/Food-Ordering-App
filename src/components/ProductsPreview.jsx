@@ -54,7 +54,7 @@ export const  ProductsPreview = () =>{
                     products.length>0 && products.map((product,index)=>{
                         return (
                             <div>
-                                <ProductPreviewCard key={index} product={product}  onAddProduct={onAddProduct}/>
+                                <ProductPreviewCard key={index} product={product} onAddProduct={onAddProduct}/>
                             </div>
                                 
                         
