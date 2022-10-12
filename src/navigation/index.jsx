@@ -24,6 +24,7 @@ const Navigation=()=>{
                 <Route path="/Menu" element={<Menu/>}/>
                 <Route path="/PaymentSuccess" element={<PaymentSuccess/>}/>
                 <Route path="/Register" element={<Register/>}/>
+                <Route path="/payment-success" element={<PaymentSuccess/>}/>
             </Routes>
             
         </BrowserRouter>

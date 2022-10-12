@@ -34,6 +34,7 @@ const PaymentForm = () => {
         }
 
         setLoading(true);
+        console.log("dfsaf")
         try {
             const { error: backeEndError, clientSecret } = await fetch('http://localhost:8080/create-payment-intent', {
                 method: 'POST',
@@ -55,11 +56,13 @@ const PaymentForm = () => {
                     }
                 }
             )
+                console.log("error", error)
             if (backeEndError || stripeError) {
                 setError(backeEndError || stripeError)
             } else if (paymentIntent.status === 'succeeded') {
                 dispatch(clearAddress());
                 dispatch(clearCart());
+                console.log("payment-success-navigation-check")
                 navigate('/payment-success');
             }
 

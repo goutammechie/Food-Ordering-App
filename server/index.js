@@ -131,11 +131,11 @@ app.post('/create-payment-intent', async(req, res) => {
             user: ''
         })
 
-        await order.save();
+        // await order.save();
 
         const paymentIntent = await stripe.paymentIntents.create({
             amount: totalPrice,
-            currency: 'usd'   // change to rupee later
+            currency: 'inr'   // change to rupee later
         })
 
         res.send({
