@@ -12,7 +12,7 @@
     "name": "Elegant Concrete Bacon",
     "adjective": "Refined",
     "desciption": "The beautiful range of Apple Naturalé that has an exciting mix of natural ingredients. With the Goodness of 100% Natural Ingredients",       
-    "price": "547.00",
+    "price": "253.00",
     "category": { "name": "breakfast", "_id": {"$oid":"631646e925a0f269d68afa54"}},
     "imageUrl": "https://www.tourmyindia.com/states/jammu-kashmir/image/cuisine-jk1.jpg"
   }
