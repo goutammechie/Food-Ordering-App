@@ -7,6 +7,7 @@ import Login from "../pages/Login";
 import Menu from "../pages/Menu";
 import PaymentSuccess from "../pages/PaymentSuccess";
 import Register from "../pages/Register";
+import { Footer } from "../components/Footer";
 
 import { useSelector } from "react-redux";
 import {  cartProducts } from "../stores/cart/cartSlice"
@@ -26,7 +27,7 @@ const Navigation=()=>{
                 <Route path="/Register" element={<Register/>}/>
                 <Route path="/payment-success" element={<PaymentSuccess/>}/>
             </Routes>
-            
+            <Footer/>
         </BrowserRouter>
 
     )

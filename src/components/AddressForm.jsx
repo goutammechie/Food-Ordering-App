@@ -4,7 +4,7 @@ import { ReactComponent as ArrowRightSvg } from "../assets/icons/arrow-right-lon
 import { useDispatch } from "react-redux";
 import { setAddress } from "../stores/userInfo/addressSlice";
 export const AddressForm = ({ onTabSwitch }) => {
-    const { register, handleSubmit  } = useForm();
+    const { register, handleSubmit, formState:{errors}  } = useForm();
     const dispatch = useDispatch();
     
     const onSubmit = (data) => {
@@ -12,7 +12,10 @@ export const AddressForm = ({ onTabSwitch }) => {
         dispatch(setAddress(data));
         onTabSwitch('Payment');
     }
+    
+        
     return (
+        
         <form className="md:w-2/3 md:mx-auto px-3 pt-1" onSubmit={handleSubmit(onSubmit)}>
             <h3 className="pt-4 text-2xl bg-gray-100 border-black border-b p-4 m-4 rounded md:text-center">Address for the delivery</h3>
             <div className="mb-4">
@@ -25,6 +28,11 @@ export const AddressForm = ({ onTabSwitch }) => {
                     type="text"
                     placeholder="Street Address"
                     />
+                    {
+                        console.log(errors.address)
+                    }
+                {
+                errors.address === undefined  && <span className="text-red-600"> This field is required !! </span>} 
                
             </div>
             <div className="mb-4 md:flex md:justify-between">

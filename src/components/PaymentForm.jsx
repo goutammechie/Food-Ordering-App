@@ -80,7 +80,7 @@ const PaymentForm = () => {
                 <CardElement id="card-element" />
             </div>
             <div className="flex justify-center p-2">
-                <Button type="submit" disbled={loading}>
+                <Button type="submit" disabled={loading}>
                     {
                         loading ?
                         'Loading...' :
